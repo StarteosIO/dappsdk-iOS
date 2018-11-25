@@ -2,8 +2,6 @@
 
 Pod::Spec.new do |s|
 
-
-
   s.name         = "STWalletSDK"
   s.version      = "1.0.1"
   s.summary      = "ST钱包原生集成SDK"
@@ -16,7 +14,7 @@ Pod::Spec.new do |s|
   s.author       = { "lazyloading" => "lazyloading@163.com" }
   s.ios.deployment_target = "10.0"
   s.source       = { :git => "https://github.com/shengguangdaren/NativeSDK.git", :tag => s.version }
-  s.source_files  =  "STWalletSDK/STWalletSDK**/*.{h,m}"
+  s.source_files  =  "STWalletSDK/STWalletSDK/Classes/**/*.{h,m}"
   s.requires_arc = true
 
 

@@ -27,7 +27,6 @@
 		96CC8B3721AADFFD00BBCD32 /* STWalletAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWalletAPI.m; sourceTree = "<group>"; };
 		96CC8B3821AADFFD00BBCD32 /* STWalletReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWalletReq.h; sourceTree = "<group>"; };
 		A43CFDA8218994D000B52D2D /* STWalletSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STWalletSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A43CFDAC218994D000B52D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				96CC8B3021AADFFD00BBCD32 /* Classes */,
-				A43CFDAC218994D000B52D2D /* Info.plist */,
 			);
 			path = STWalletSDK;
 			sourceTree = "<group>";
