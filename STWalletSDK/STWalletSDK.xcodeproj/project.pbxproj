@@ -7,26 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A43CFDB9218994D000B52D2D /* STWalletSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = A43CFDAB218994D000B52D2D /* STWalletSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A43CFDC42189952B00B52D2D /* STWalletAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = A43CFDC22189952B00B52D2D /* STWalletAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A43CFDC52189952B00B52D2D /* STWalletAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A43CFDC32189952B00B52D2D /* STWalletAPI.m */; };
-		A43CFDC82189953600B52D2D /* STWalletReq.h in Headers */ = {isa = PBXBuildFile; fileRef = A43CFDC62189953600B52D2D /* STWalletReq.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A43CFDC92189953600B52D2D /* STWalletReq.m in Sources */ = {isa = PBXBuildFile; fileRef = A43CFDC72189953600B52D2D /* STWalletReq.m */; };
-		A43CFDCC2189954200B52D2D /* STWalletResp.h in Headers */ = {isa = PBXBuildFile; fileRef = A43CFDCA2189954200B52D2D /* STWalletResp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A43CFDCD2189954200B52D2D /* STWalletResp.m in Sources */ = {isa = PBXBuildFile; fileRef = A43CFDCB2189954200B52D2D /* STWalletResp.m */; };
+		96CC8B3921AADFFD00BBCD32 /* STHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 96CC8B3121AADFFD00BBCD32 /* STHeader.h */; };
+		96CC8B3A21AADFFD00BBCD32 /* STWalletResp.h in Headers */ = {isa = PBXBuildFile; fileRef = 96CC8B3221AADFFD00BBCD32 /* STWalletResp.h */; };
+		96CC8B3B21AADFFD00BBCD32 /* STWalletAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 96CC8B3321AADFFD00BBCD32 /* STWalletAPI.h */; };
+		96CC8B3C21AADFFD00BBCD32 /* STWalletSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 96CC8B3421AADFFD00BBCD32 /* STWalletSDK.h */; };
+		96CC8B3D21AADFFD00BBCD32 /* STWalletReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CC8B3521AADFFD00BBCD32 /* STWalletReq.m */; };
+		96CC8B3E21AADFFD00BBCD32 /* STWalletResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CC8B3621AADFFD00BBCD32 /* STWalletResp.m */; };
+		96CC8B3F21AADFFD00BBCD32 /* STWalletAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CC8B3721AADFFD00BBCD32 /* STWalletAPI.m */; };
+		96CC8B4021AADFFD00BBCD32 /* STWalletReq.h in Headers */ = {isa = PBXBuildFile; fileRef = 96CC8B3821AADFFD00BBCD32 /* STWalletReq.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96CC8B3121AADFFD00BBCD32 /* STHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHeader.h; sourceTree = "<group>"; };
+		96CC8B3221AADFFD00BBCD32 /* STWalletResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWalletResp.h; sourceTree = "<group>"; };
+		96CC8B3321AADFFD00BBCD32 /* STWalletAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWalletAPI.h; sourceTree = "<group>"; };
+		96CC8B3421AADFFD00BBCD32 /* STWalletSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWalletSDK.h; sourceTree = "<group>"; };
+		96CC8B3521AADFFD00BBCD32 /* STWalletReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWalletReq.m; sourceTree = "<group>"; };
+		96CC8B3621AADFFD00BBCD32 /* STWalletResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWalletResp.m; sourceTree = "<group>"; };
+		96CC8B3721AADFFD00BBCD32 /* STWalletAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWalletAPI.m; sourceTree = "<group>"; };
+		96CC8B3821AADFFD00BBCD32 /* STWalletReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWalletReq.h; sourceTree = "<group>"; };
 		A43CFDA8218994D000B52D2D /* STWalletSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STWalletSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A43CFDAB218994D000B52D2D /* STWalletSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STWalletSDK.h; sourceTree = "<group>"; };
 		A43CFDAC218994D000B52D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A43CFDC22189952B00B52D2D /* STWalletAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STWalletAPI.h; sourceTree = "<group>"; };
-		A43CFDC32189952B00B52D2D /* STWalletAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STWalletAPI.m; sourceTree = "<group>"; };
-		A43CFDC62189953600B52D2D /* STWalletReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STWalletReq.h; sourceTree = "<group>"; };
-		A43CFDC72189953600B52D2D /* STWalletReq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STWalletReq.m; sourceTree = "<group>"; };
-		A43CFDCA2189954200B52D2D /* STWalletResp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STWalletResp.h; sourceTree = "<group>"; };
-		A43CFDCB2189954200B52D2D /* STWalletResp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STWalletResp.m; sourceTree = "<group>"; };
-		C083C36421A7E3DA006DE55D /* STHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96CC8B3021AADFFD00BBCD32 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				96CC8B3121AADFFD00BBCD32 /* STHeader.h */,
+				96CC8B3221AADFFD00BBCD32 /* STWalletResp.h */,
+				96CC8B3321AADFFD00BBCD32 /* STWalletAPI.h */,
+				96CC8B3421AADFFD00BBCD32 /* STWalletSDK.h */,
+				96CC8B3521AADFFD00BBCD32 /* STWalletReq.m */,
+				96CC8B3621AADFFD00BBCD32 /* STWalletResp.m */,
+				96CC8B3721AADFFD00BBCD32 /* STWalletAPI.m */,
+				96CC8B3821AADFFD00BBCD32 /* STWalletReq.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		A43CFD9E218994D000B52D2D = {
 			isa = PBXGroup;
 			children = (
@@ -59,14 +75,7 @@
 		A43CFDAA218994D000B52D2D /* STWalletSDK */ = {
 			isa = PBXGroup;
 			children = (
-				A43CFDAB218994D000B52D2D /* STWalletSDK.h */,
-				A43CFDC22189952B00B52D2D /* STWalletAPI.h */,
-				A43CFDC32189952B00B52D2D /* STWalletAPI.m */,
-				A43CFDC62189953600B52D2D /* STWalletReq.h */,
-				A43CFDC72189953600B52D2D /* STWalletReq.m */,
-				A43CFDCA2189954200B52D2D /* STWalletResp.h */,
-				A43CFDCB2189954200B52D2D /* STWalletResp.m */,
-				C083C36421A7E3DA006DE55D /* STHeader.h */,
+				96CC8B3021AADFFD00BBCD32 /* Classes */,
 				A43CFDAC218994D000B52D2D /* Info.plist */,
 			);
 			path = STWalletSDK;
@@ -79,10 +88,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A43CFDB9218994D000B52D2D /* STWalletSDK.h in Headers */,
-				A43CFDC42189952B00B52D2D /* STWalletAPI.h in Headers */,
-				A43CFDCC2189954200B52D2D /* STWalletResp.h in Headers */,
-				A43CFDC82189953600B52D2D /* STWalletReq.h in Headers */,
+				96CC8B3A21AADFFD00BBCD32 /* STWalletResp.h in Headers */,
+				96CC8B4021AADFFD00BBCD32 /* STWalletReq.h in Headers */,
+				96CC8B3C21AADFFD00BBCD32 /* STWalletSDK.h in Headers */,
+				96CC8B3921AADFFD00BBCD32 /* STHeader.h in Headers */,
+				96CC8B3B21AADFFD00BBCD32 /* STWalletAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,9 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A43CFDC92189953600B52D2D /* STWalletReq.m in Sources */,
-				A43CFDCD2189954200B52D2D /* STWalletResp.m in Sources */,
-				A43CFDC52189952B00B52D2D /* STWalletAPI.m in Sources */,
+				96CC8B3D21AADFFD00BBCD32 /* STWalletReq.m in Sources */,
+				96CC8B3E21AADFFD00BBCD32 /* STWalletResp.m in Sources */,
+				96CC8B3F21AADFFD00BBCD32 /* STWalletAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
