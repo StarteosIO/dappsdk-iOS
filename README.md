@@ -4,7 +4,7 @@
 
 ## 集成
 ### 手动集成
-下载STWalletSDK工程或Demo,将`STWalletSDK `文件夹拖入你的工程
+下载STWalletSDK工程或Demo,将`Classes `文件夹内文件拖入你的工程
 
 
 
@@ -26,7 +26,7 @@
 
 ```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [STWalletAPI registerAppURLSchemes:@"STWallet"];
+    [STWalletAPI registerAppURLSchemes:@"STWallet"];//你的应用的Schemes
     return YES;
 }
 ```
