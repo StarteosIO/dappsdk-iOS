@@ -10,11 +10,11 @@ Pod::Spec.new do |s|
                   DESC
   s.homepage     = "https://github.com/shengguangdaren/NativeSDK"
   #s.license     = { :type => "MIT", :file => "LICENSE"}
-  s.license      = 'MIT'
+  s.license      = 'LICENSE'
   s.author       = { "lazyloading" => "lazyloading@163.com" }
   s.ios.deployment_target = "10.0"
-  s.source       = { :git => "https://github.com/shengguangdaren/NativeSDK.git", :tag => s.version }
-  s.source_files  =  "STWalletSDK/STWalletSDK/Classes/**/*.{h,m}"
+  s.source       = { :git => "https://github.com/shengguangdaren/NativeSDK.git", :tag => s.version.to_s }
+  s.source_files  =  "STWalletSDK/STWalletSDK/*"
   s.requires_arc = true
 
 
