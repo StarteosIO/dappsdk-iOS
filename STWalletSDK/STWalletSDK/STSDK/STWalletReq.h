@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger, STWalletProtocol) {
-    /**STProtocol*/
-    STProtocol,
     /**SimpleWallet*/
-    STProtocolSimpleWallet
+    STProtocolSimpleWallet,
+    /**STProtocol*/
+    STProtocol
 };
 
 /*!
@@ -27,7 +27,7 @@ typedef NS_ENUM(NSUInteger, STWalletProtocol) {
 @property (nonatomic, copy) NSString *dappIcon;               // dapp图标Url，用于在钱包APP中展示
 @property (nonatomic, copy) NSString *blockchain;             // 公链标识（eosio、ont、ethereum等）
 @property (nonatomic, copy) NSString *action;                 // 登录时，赋值为login。支付时，赋值为transfer 退出登录 logout;
-/** 默认 STProtocol*/
+/** 默认 STProtocolSimpleWallet*/
 @property(nonatomic,assign)STWalletProtocol currentProtocol;
 // Req->NSDictionary
 -(NSDictionary *)toParams;

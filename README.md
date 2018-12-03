@@ -4,7 +4,7 @@
 
 ## 集成
 ### 手动集成
-下载STWalletSDK工程或Demo,将`Classes `文件夹内文件拖入你的工程
+下载STWalletSDK工程或Demo,将`STSDK`文件夹内文件拖入你的工程
 
 
 
@@ -279,6 +279,231 @@ BOOL result = [STWalletAPI sendReq:loginReq];
 
 
 ### SimpleWallet协议用法：
+> 此Demo中出现数据仅做为开发参考用例 具体协议详情介绍参见[SimpleWallet](https://github.com/southex/SimpleWallet)
+
+#### 登录
+
+> 调用
+ 
+```objectivec
+    STWalletLoginReq *loginReq = [[STWalletLoginReq alloc] init];
+    // 公链标识
+    loginReq.blockchain = @"eosio";   // eosio、eosforce、ethereum
+    // DApp信息
+    loginReq.dappIcon = @"https://newdex.io/static/logoicon.png";
+    loginReq.dappName = @"Demos";
+    // DApp Server
+    loginReq.uuID = @"web-7c2ab24b-ded9-42e0-36d6-f37bc498cf78";
+    loginReq.loginUrl = @"https://newdex.io/api/account/walletVerify";
+    loginReq.expired = [NSNumber numberWithLong:([NSDate date].timeIntervalSince1970 + 60)];
+    loginReq.loginMemo = @"Memo";
+
+    [STWalletAPI sendReq:loginReq];
+```
+
+> 结果 
+
+```objectivec
+{
+    action = login;
+    currentProtocol = SimpleWallet;
+    data = "授权成功";
+    result = 1;
+}
+
+```
+
+#### 转账
+
+> 调用
+
+```objectivec
+    STWalletTransferReq * req = [[STWalletTransferReq alloc] init];
+    req.dappName = @"shaohong";
+    req.dappIcon = nil;
+    req.blockchain = @"eosio";
+    req.action = @"transfer";
+    //此处账号为登录后获取到的信息  demo写固定值仅作为参考
+    req.from = @"lazyloadingg";
+    req.to = @"zijin.x";
+    req.amount = @"1.0000";
+    req.contract = @"eosio.token";
+    req.symbol = @"EOS";
+    req.precision = @(4);
+    req.dappData = @"测试转账";
+    req.desc = @"这是个转账操作";
+    req.expired = [NSNumber numberWithLong:([NSDate date].timeIntervalSince1970 + 60)];
+    [STWalletAPI sendReq:req];
+```
+
+> 结果
+
+```objectivec
+{
+    action = transfer;
+    currentProtocol = SimpleWallet;
+    data =     {
+        processed =         {
+            "action_traces" =             (
+                                {
+                    "account_ram_deltas" =                     (
+                    );
+                    act =                     {
+                        account = "eosio.token";
+                        authorization =                         (
+                                                        {
+                                actor = lazyloadingg;
+                                permission = owner;
+                            }
+                        );
+                        data =                         {
+                            from = lazyloadingg;
+                            memo = "\U6d4b\U8bd5\U8f6c\U8d26";
+                            quantity = "0.0001 EOS";
+                            to = "zijin.x";
+                        };
+                        "hex_data" = c0d874c9d0e8bf89000000a083e99efb010000000000000004454f53000000000ce6b58be8af95e8bdace8b4a6;
+                        name = transfer;
+                    };
+                    "block_num" = 30118546;
+                    "block_time" = "2018-12-03T07:00:28.000";
+                    console = "";
+                    "context_free" = 0;
+                    "cpu_usage" = 0;
+                    elapsed = 379;
+                    "inline_traces" =                     (
+                                                {
+                            "account_ram_deltas" =                             (
+                            );
+                            act =                             {
+                                account = "eosio.token";
+                                authorization =                                 (
+                                                                        {
+                                        actor = lazyloadingg;
+                                        permission = owner;
+                                    }
+                                );
+                                data =                                 {
+                                    from = lazyloadingg;
+                                    memo = "\U6d4b\U8bd5\U8f6c\U8d26";
+                                    quantity = "0.0001 EOS";
+                                    to = "zijin.x";
+                                };
+                                "hex_data" = c0d874c9d0e8bf89000000a083e99efb010000000000000004454f53000000000ce6b58be8af95e8bdace8b4a6;
+                                name = transfer;
+                            };
+                            "block_num" = 30118546;
+                            "block_time" = "2018-12-03T07:00:28.000";
+                            console = "";
+                            "context_free" = 0;
+                            "cpu_usage" = 0;
+                            elapsed = 17;
+                            "inline_traces" =                             (
+                            );
+                            "producer_block_id" = "";
+                            receipt =                             {
+                                "abi_sequence" = 2;
+                                "act_digest" = 80518c2e722a1eba0fa92acf32cec3be8ebd2d5530e1a6702c8591c809e5ee79;
+                                "auth_sequence" =                                 (
+                                                                        (
+                                        lazyloadingg,
+                                        1134
+                                    )
+                                );
+                                "code_sequence" = 2;
+                                "global_sequence" = 2405837055;
+                                receiver = lazyloadingg;
+                                "recv_sequence" = 912;
+                            };
+                            "total_cpu_usage" = 0;
+                            "trx_id" = a7147f45c6aeab4d7626cfc25ff6ba50b7cf5fb4ce7b9ecdab3bebb9b493eb3f;
+                        },
+                                                {
+                            "account_ram_deltas" =                             (
+                            );
+                            act =                             {
+                                account = "eosio.token";
+                                authorization =                                 (
+                                                                        {
+                                        actor = lazyloadingg;
+                                        permission = owner;
+                                    }
+                                );
+                                data =                                 {
+                                    from = lazyloadingg;
+                                    memo = "\U6d4b\U8bd5\U8f6c\U8d26";
+                                    quantity = "0.0001 EOS";
+                                    to = "zijin.x";
+                                };
+                                "hex_data" = c0d874c9d0e8bf89000000a083e99efb010000000000000004454f53000000000ce6b58be8af95e8bdace8b4a6;
+                                name = transfer;
+                            };
+                            "block_num" = 30118546;
+                            "block_time" = "2018-12-03T07:00:28.000";
+                            console = "";
+                            "context_free" = 0;
+                            "cpu_usage" = 0;
+                            elapsed = 23;
+                            "inline_traces" =                             (
+                            );
+                            "producer_block_id" = "";
+                            receipt =                             {
+                                "abi_sequence" = 2;
+                                "act_digest" = 80518c2e722a1eba0fa92acf32cec3be8ebd2d5530e1a6702c8591c809e5ee79;
+                                "auth_sequence" =                                 (
+                                                                        (
+                                        lazyloadingg,
+                                        1135
+                                    )
+                                );
+                                "code_sequence" = 2;
+                                "global_sequence" = 2405837056;
+                                receiver = "zijin.x";
+                                "recv_sequence" = 9;
+                            };
+                            "total_cpu_usage" = 0;
+                            "trx_id" = a7147f45c6aeab4d7626cfc25ff6ba50b7cf5fb4ce7b9ecdab3bebb9b493eb3f;
+                        }
+                    );
+                    "producer_block_id" = "";
+                    receipt =                     {
+                        "abi_sequence" = 2;
+                        "act_digest" = 80518c2e722a1eba0fa92acf32cec3be8ebd2d5530e1a6702c8591c809e5ee79;
+                        "auth_sequence" =                         (
+                                                        (
+                                lazyloadingg,
+                                1133
+                            )
+                        );
+                        "code_sequence" = 2;
+                        "global_sequence" = 2405837054;
+                        receiver = "eosio.token";
+                        "recv_sequence" = 388796536;
+                    };
+                    "total_cpu_usage" = 0;
+                    "trx_id" = a7147f45c6aeab4d7626cfc25ff6ba50b7cf5fb4ce7b9ecdab3bebb9b493eb3f;
+                }
+            );
+            "block_num" = 30118546;
+            "block_time" = "2018-12-03T07:00:28.000";
+            elapsed = 705;
+            except = "";
+            id = a7147f45c6aeab4d7626cfc25ff6ba50b7cf5fb4ce7b9ecdab3bebb9b493eb3f;
+            "net_usage" = 144;
+            "producer_block_id" = "";
+            receipt =             {
+                "cpu_usage_us" = 705;
+                "net_usage_words" = 18;
+                status = executed;
+            };
+            scheduled = 0;
+        };
+        "transaction_id" = a7147f45c6aeab4d7626cfc25ff6ba50b7cf5fb4ce7b9ecdab3bebb9b493eb3f;
+    };
+    result = 1;
+}
+
+```
 
 
 
