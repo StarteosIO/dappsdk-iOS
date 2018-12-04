@@ -100,11 +100,29 @@
                                     <action selector="cusaction:" destination="lYj-a5-R61" eventType="touchUpInside" id="3ZA-gA-3IH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdB-Ie-ov1">
+                                <rect key="frame" x="133" y="389" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="签名"/>
+                                <connections>
+                                    <action selector="authenticate:" destination="lYj-a5-R61" eventType="touchUpInside" id="sPM-PQ-JMq"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="qwertyuiopas" borderStyle="roundedRect" placeholder="签名数据 不大于12位" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVk-C7-pIZ">
+                                <rect key="frame" x="92" y="442" width="191" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="sVy-xP-H5a"/>
                     </view>
                     <navigationItem key="navigationItem" id="cBU-Yf-0PC"/>
+                    <connections>
+                        <outlet property="authenticateText" destination="LVk-C7-pIZ" id="cSt-GN-U7e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kuF-gh-bIT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

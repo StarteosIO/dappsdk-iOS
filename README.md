@@ -4,7 +4,7 @@
 
 ## 集成
 ### 手动集成
-下载STWalletSDK工程或Demo,将`STSDK`文件夹内文件拖入你的工程
+下载STWalletSDK Demo,将`STWalletSDK.framework`文件加入你的工程
 
 
 
@@ -75,10 +75,10 @@
 
 ```objectivec
 
-STWalletLoginReq *loginReq = [[STWalletLoginReq alloc] init];
-loginReq.dappName = @"Demo";//第三方登录者
-    
-BOOL result = [STWalletAPI sendReq:loginReq]; 
+    STWalletLoginReq *loginReq = [[STWalletLoginReq alloc] init];
+    loginReq.currentProtocol = STProtocol;
+    loginReq.dappName = @"DAppName";//第三方登录者
+    BOOL result = [STWalletAPI sendReq:loginReq]; 
     
 ```
 
@@ -92,12 +92,45 @@ BOOL result = [STWalletAPI sendReq:loginReq];
 }
 ```
 
+#### 身份验证
+
+> 调用:
+
+```objectivec
+    STWalletAuthenticate *  authenticate = [[STWalletAuthenticate alloc]init];
+    authenticate.currentProtocol = STProtocol;
+    authenticate.from = @"验证账户名";
+    authenticate.fromAddress = @"验证账户公钥";
+    authenticate.nonce = self.authenticateText.text;
+    BOOL result = [STWalletAPI sendReq:authenticate];
+```
+
+> 结果:
+
+```objectivec
+{
+    signature = "SIG_K1_KBFEo8bVfzy78NdDkDpdAnWJKcqzjaLvafsg3m2STzCYUHDV5wfM3pZQ1txTzz5f3rc3bQUoQDGvcsUafZVziw9G5YEW32";
+}
+```
+
+#### 退出登录
+> 调用:
+
+```objectivec
+    STWalletLogoutReq * logout = [STWalletLogoutReq new];
+    logout.currentProtocol = STProtocol;
+    BOOL result = [STWalletAPI sendReq:logout];
+
+```
+
+
 #### 转账
 
-> 调用 
+> 调用:
 
 ```objectivec
     STWalletTransferReq * req = [[STWalletTransferReq alloc] init];
+    req.currentProtocol = STProtocol;
     
     /**登录状态下可不传*/
     req.fromAddress = @"转出公钥";
@@ -113,7 +146,7 @@ BOOL result = [STWalletAPI sendReq:loginReq];
     
 ```
 
-> 结果
+> 结果:
 
 ```objectivec
 {
@@ -283,7 +316,7 @@ BOOL result = [STWalletAPI sendReq:loginReq];
 
 #### 登录
 
-> 调用
+> 调用:
  
 ```objectivec
     STWalletLoginReq *loginReq = [[STWalletLoginReq alloc] init];
@@ -301,7 +334,7 @@ BOOL result = [STWalletAPI sendReq:loginReq];
     [STWalletAPI sendReq:loginReq];
 ```
 
-> 结果 
+> 结果:
 
 ```objectivec
 {
@@ -315,7 +348,7 @@ BOOL result = [STWalletAPI sendReq:loginReq];
 
 #### 转账
 
-> 调用
+> 调用:
 
 ```objectivec
     STWalletTransferReq * req = [[STWalletTransferReq alloc] init];
@@ -336,7 +369,7 @@ BOOL result = [STWalletAPI sendReq:loginReq];
     [STWalletAPI sendReq:req];
 ```
 
-> 结果
+> 结果:
 
 ```objectivec
 {

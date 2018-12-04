@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "STSDK/STWalletAPI.h"
+#import <STWalletSDK/STWalletAPI.h>
 @interface AppDelegate ()
 
 @end

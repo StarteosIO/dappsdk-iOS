@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		C010B2A221B4DE5E00FAE8C1 /* STProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C010B2A121B4DE5E00FAE8C1 /* STProtocolVC.m */; };
 		C010B2A521B4DE7000FAE8C1 /* SimpleWalletVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C010B2A421B4DE7000FAE8C1 /* SimpleWalletVC.m */; };
-		C010B2BB21B4E59C00FAE8C1 /* STWalletReq.m in Sources */ = {isa = PBXBuildFile; fileRef = C010B2B721B4E59C00FAE8C1 /* STWalletReq.m */; };
-		C010B2BC21B4E59C00FAE8C1 /* STWalletResp.m in Sources */ = {isa = PBXBuildFile; fileRef = C010B2B821B4E59C00FAE8C1 /* STWalletResp.m */; };
-		C010B2BD21B4E59C00FAE8C1 /* STWalletAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C010B2B921B4E59C00FAE8C1 /* STWalletAPI.m */; };
+		C077EA8221B683A000DDA787 /* STWalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C077EA8121B683A000DDA787 /* STWalletSDK.framework */; };
 		C083C37321A8195B006DE55D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C083C37221A8195B006DE55D /* AppDelegate.m */; };
 		C083C37621A8195B006DE55D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C083C37521A8195B006DE55D /* ViewController.m */; };
 		C083C37921A8195B006DE55D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C083C37721A8195B006DE55D /* Main.storyboard */; };
@@ -44,14 +42,7 @@
 		C010B2A121B4DE5E00FAE8C1 /* STProtocolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STProtocolVC.m; sourceTree = "<group>"; };
 		C010B2A321B4DE7000FAE8C1 /* SimpleWalletVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleWalletVC.h; sourceTree = "<group>"; };
 		C010B2A421B4DE7000FAE8C1 /* SimpleWalletVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleWalletVC.m; sourceTree = "<group>"; };
-		C010B2B321B4E59C00FAE8C1 /* STHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHeader.h; sourceTree = "<group>"; };
-		C010B2B421B4E59C00FAE8C1 /* STWalletResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWalletResp.h; sourceTree = "<group>"; };
-		C010B2B521B4E59C00FAE8C1 /* STWalletAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWalletAPI.h; sourceTree = "<group>"; };
-		C010B2B621B4E59C00FAE8C1 /* STWalletSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWalletSDK.h; sourceTree = "<group>"; };
-		C010B2B721B4E59C00FAE8C1 /* STWalletReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWalletReq.m; sourceTree = "<group>"; };
-		C010B2B821B4E59C00FAE8C1 /* STWalletResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWalletResp.m; sourceTree = "<group>"; };
-		C010B2B921B4E59C00FAE8C1 /* STWalletAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWalletAPI.m; sourceTree = "<group>"; };
-		C010B2BA21B4E59C00FAE8C1 /* STWalletReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWalletReq.h; sourceTree = "<group>"; };
+		C077EA8121B683A000DDA787 /* STWalletSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = STWalletSDK.framework; sourceTree = "<group>"; };
 		C083C36E21A8195B006DE55D /* SDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C083C37121A8195B006DE55D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C083C37221A8195B006DE55D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C077EA8221B683A000DDA787 /* STWalletSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,21 +87,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C010B2B221B4E59C00FAE8C1 /* STSDK */ = {
-			isa = PBXGroup;
-			children = (
-				C010B2B321B4E59C00FAE8C1 /* STHeader.h */,
-				C010B2B421B4E59C00FAE8C1 /* STWalletResp.h */,
-				C010B2B521B4E59C00FAE8C1 /* STWalletAPI.h */,
-				C010B2B621B4E59C00FAE8C1 /* STWalletSDK.h */,
-				C010B2B721B4E59C00FAE8C1 /* STWalletReq.m */,
-				C010B2B821B4E59C00FAE8C1 /* STWalletResp.m */,
-				C010B2B921B4E59C00FAE8C1 /* STWalletAPI.m */,
-				C010B2BA21B4E59C00FAE8C1 /* STWalletReq.h */,
-			);
-			path = STSDK;
-			sourceTree = "<group>";
-		};
 		C083C36521A8195B006DE55D = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +110,7 @@
 		C083C37021A8195B006DE55D /* SDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C010B2B221B4E59C00FAE8C1 /* STSDK */,
+				C077EA8121B683A000DDA787 /* STWalletSDK.framework */,
 				C083C37121A8195B006DE55D /* AppDelegate.h */,
 				C083C37221A8195B006DE55D /* AppDelegate.m */,
 				C083C37421A8195B006DE55D /* ViewController.h */,
@@ -300,10 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C083C37621A8195B006DE55D /* ViewController.m in Sources */,
-				C010B2BC21B4E59C00FAE8C1 /* STWalletResp.m in Sources */,
-				C010B2BD21B4E59C00FAE8C1 /* STWalletAPI.m in Sources */,
 				C083C38121A8195D006DE55D /* main.m in Sources */,
-				C010B2BB21B4E59C00FAE8C1 /* STWalletReq.m in Sources */,
 				C010B2A221B4DE5E00FAE8C1 /* STProtocolVC.m in Sources */,
 				C083C37321A8195B006DE55D /* AppDelegate.m in Sources */,
 				C010B2A521B4DE7000FAE8C1 /* SimpleWalletVC.m in Sources */,
@@ -479,7 +453,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AW9VM5JGA3;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDKDemo",
+				);
 				INFOPLIST_FILE = SDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,7 +476,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AW9VM5JGA3;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDKDemo",
+				);
 				INFOPLIST_FILE = SDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

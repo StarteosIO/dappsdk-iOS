@@ -7,8 +7,9 @@
 //
 
 #import "STProtocolVC.h"
-#import "STSDK/STWalletAPI.h"
+#import <STWalletSDK/STWalletAPI.h>
 @interface STProtocolVC ()
+@property (weak, nonatomic) IBOutlet UITextField *authenticateText;
 
 @end
 
@@ -22,17 +23,7 @@
     
     STWalletLoginReq *loginReq = [[STWalletLoginReq alloc] init];
     loginReq.currentProtocol = STProtocol;
-    // 公链标识
-    loginReq.blockchain = @"eosio";   // eosio、eosforce、ethereum
-    // DApp信息
-    loginReq.dappIcon = @"http://www.mathwallet.org/images/download/wallet_cn.png";
-    loginReq.dappName = @"Demos";
-    // DApp Server
-    loginReq.uuID = @"uid";
-    loginReq.loginUrl = @"longaaa";
-    loginReq.expired = [NSNumber numberWithLong:([NSDate date].timeIntervalSince1970 + 60)];
-    loginReq.loginMemo = @"Memo";
-    
+    loginReq.dappName = @"Demos";    
     BOOL result = [STWalletAPI sendReq:loginReq];
         NSLog(@"登录调用---%d",result);
 }
@@ -101,5 +92,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)authenticate:(id)sender {
+    
+    STWalletAuthenticate *  authenticate = [[STWalletAuthenticate alloc]init];
+    authenticate.currentProtocol = STProtocol;
+    authenticate.from = @"lazyloadingg";
+    authenticate.fromAddress = @"EOS6qsKUyr8Em5QHLUEhkoX1YjbJeWMSDf4fprZJwAgVMaFbkVJeV";
+    authenticate.nonce = self.authenticateText.text;
+    BOOL result = [STWalletAPI sendReq:authenticate];
+    NSLog(@"登录调用---%d",result);
+}
 
 @end

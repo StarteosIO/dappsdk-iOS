@@ -96,3 +96,13 @@ typedef NS_ENUM(NSUInteger, STWalletProtocol) {
 @property (nonatomic, copy) NSString *fromAddress;        //付款账户公钥
 
 @end
+
+/**STProtocol协议方法*/
+#pragma mark - 自定义Trasaction
+@interface STWalletAuthenticate : STWalletReq
+@property (nonatomic, copy) NSString *from;     //账户名
+@property (nonatomic, copy) NSString *fromAddress;        //账户公钥
+/**不大于12位*/
+@property (nonatomic, copy) NSString *nonce;        //签名内容
+@end
+
