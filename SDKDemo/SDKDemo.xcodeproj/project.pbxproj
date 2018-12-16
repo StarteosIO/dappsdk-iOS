@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96E04B4921C64BB100B1951B /* STWalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E04B4821C64BB100B1951B /* STWalletSDK.framework */; };
 		C010B2A221B4DE5E00FAE8C1 /* STProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C010B2A121B4DE5E00FAE8C1 /* STProtocolVC.m */; };
 		C010B2A521B4DE7000FAE8C1 /* SimpleWalletVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C010B2A421B4DE7000FAE8C1 /* SimpleWalletVC.m */; };
-		C077EA8221B683A000DDA787 /* STWalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C077EA8121B683A000DDA787 /* STWalletSDK.framework */; };
 		C083C37321A8195B006DE55D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C083C37221A8195B006DE55D /* AppDelegate.m */; };
 		C083C37621A8195B006DE55D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C083C37521A8195B006DE55D /* ViewController.m */; };
 		C083C37921A8195B006DE55D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C083C37721A8195B006DE55D /* Main.storyboard */; };
@@ -38,11 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96E04B4821C64BB100B1951B /* STWalletSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = STWalletSDK.framework; sourceTree = "<group>"; };
 		C010B2A021B4DE5E00FAE8C1 /* STProtocolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STProtocolVC.h; sourceTree = "<group>"; };
 		C010B2A121B4DE5E00FAE8C1 /* STProtocolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STProtocolVC.m; sourceTree = "<group>"; };
 		C010B2A321B4DE7000FAE8C1 /* SimpleWalletVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleWalletVC.h; sourceTree = "<group>"; };
 		C010B2A421B4DE7000FAE8C1 /* SimpleWalletVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleWalletVC.m; sourceTree = "<group>"; };
-		C077EA8121B683A000DDA787 /* STWalletSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = STWalletSDK.framework; sourceTree = "<group>"; };
 		C083C36E21A8195B006DE55D /* SDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C083C37121A8195B006DE55D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C083C37221A8195B006DE55D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C077EA8221B683A000DDA787 /* STWalletSDK.framework in Frameworks */,
+				96E04B4921C64BB100B1951B /* STWalletSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96E04B4721C64B9E00B1951B /* STWalletSDK */ = {
+			isa = PBXGroup;
+			children = (
+				96E04B4821C64BB100B1951B /* STWalletSDK.framework */,
+			);
+			path = STWalletSDK;
+			sourceTree = "<group>";
+		};
 		C083C36521A8195B006DE55D = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +118,7 @@
 		C083C37021A8195B006DE55D /* SDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C077EA8121B683A000DDA787 /* STWalletSDK.framework */,
+				96E04B4721C64B9E00B1951B /* STWalletSDK */,
 				C083C37121A8195B006DE55D /* AppDelegate.h */,
 				C083C37221A8195B006DE55D /* AppDelegate.m */,
 				C083C37421A8195B006DE55D /* ViewController.h */,
@@ -457,6 +465,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SDKDemo",
+					"$(PROJECT_DIR)/SDKDemo/STWalletSDK",
 				);
 				INFOPLIST_FILE = SDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
@@ -480,6 +489,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SDKDemo",
+					"$(PROJECT_DIR)/SDKDemo/STWalletSDK",
 				);
 				INFOPLIST_FILE = SDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
