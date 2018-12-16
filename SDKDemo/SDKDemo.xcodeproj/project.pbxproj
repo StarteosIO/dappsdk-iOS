@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96E04B4921C64BB100B1951B /* STWalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E04B4821C64BB100B1951B /* STWalletSDK.framework */; };
-		C010B2A221B4DE5E00FAE8C1 /* STProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C010B2A121B4DE5E00FAE8C1 /* STProtocolVC.m */; };
-		C010B2A521B4DE7000FAE8C1 /* SimpleWalletVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C010B2A421B4DE7000FAE8C1 /* SimpleWalletVC.m */; };
+		96E04B4B21C6503D00B1951B /* STWalletSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96E04B4821C64BB100B1951B /* STWalletSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		96E04B4D21C650CD00B1951B /* STProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C010B2A121B4DE5E00FAE8C1 /* STProtocolVC.m */; };
+		96E04B4E21C650CD00B1951B /* SimpleWalletVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C010B2A421B4DE7000FAE8C1 /* SimpleWalletVC.m */; };
 		C083C37321A8195B006DE55D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C083C37221A8195B006DE55D /* AppDelegate.m */; };
 		C083C37621A8195B006DE55D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C083C37521A8195B006DE55D /* ViewController.m */; };
 		C083C37921A8195B006DE55D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C083C37721A8195B006DE55D /* Main.storyboard */; };
@@ -36,6 +36,20 @@
 			remoteInfo = SDKDemo;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		96E04B4C21C6503D00B1951B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				96E04B4B21C6503D00B1951B /* STWalletSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		96E04B4821C64BB100B1951B /* STWalletSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = STWalletSDK.framework; sourceTree = "<group>"; };
@@ -66,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E04B4921C64BB100B1951B /* STWalletSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +177,7 @@
 				C083C36A21A8195B006DE55D /* Sources */,
 				C083C36B21A8195B006DE55D /* Frameworks */,
 				C083C36C21A8195B006DE55D /* Resources */,
+				96E04B4C21C6503D00B1951B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,11 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E04B4D21C650CD00B1951B /* STProtocolVC.m in Sources */,
+				96E04B4E21C650CD00B1951B /* SimpleWalletVC.m in Sources */,
 				C083C37621A8195B006DE55D /* ViewController.m in Sources */,
 				C083C38121A8195D006DE55D /* main.m in Sources */,
-				C010B2A221B4DE5E00FAE8C1 /* STProtocolVC.m in Sources */,
 				C083C37321A8195B006DE55D /* AppDelegate.m in Sources */,
-				C010B2A521B4DE7000FAE8C1 /* SimpleWalletVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AW9VM5JGA3;
+				DEVELOPMENT_TEAM = F5S3CD83Z4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -484,7 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AW9VM5JGA3;
+				DEVELOPMENT_TEAM = F5S3CD83Z4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

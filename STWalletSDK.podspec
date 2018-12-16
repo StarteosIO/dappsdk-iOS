@@ -92,7 +92,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.source_files  = "SDKDemo", "SDKDemo/STWalletSDK/*"
-  s.vendored_frameworks = "**/STWalletSDK/STWalletSDK.framework"
+  spec.vendored_frameworks = "**/STWalletSDK/STWalletSDK.framework"
 
 #spec.exclude_files = "Classes/Exclude"
 
