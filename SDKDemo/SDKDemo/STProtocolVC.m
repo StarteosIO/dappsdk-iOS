@@ -22,26 +22,28 @@
 - (IBAction)login:(id)sender {
     
     STWalletLoginReq *loginReq = [[STWalletLoginReq alloc] init];
-    loginReq.currentProtocol = STProtocol;
+    loginReq.protocol = STProtocol;
     loginReq.dappName = @"Demos";    
     BOOL result = [STWalletAPI sendReq:loginReq];
         NSLog(@"登录调用---%d",result);
 }
 - (IBAction)logout:(id)sender {
     STWalletLogoutReq * logout = [STWalletLogoutReq new];
-    logout.currentProtocol = STProtocol;
+    logout.protocol = STProtocol;
     BOOL result = [STWalletAPI sendReq:logout];
     NSLog(@"退出调用---%d",result);
 }
 - (IBAction)transfer:(id)sender {
     
     STWalletTransferReq * req = [[STWalletTransferReq alloc] init];
-    req.currentProtocol = STProtocol;
+    req.protocol = STProtocol;
     
     /**STProtocol 协议 登录状态下可不传*/
     //    req.fromAddress = @"转出公钥";
     //    req.from = @"转出账户";
     
+    
+//    req.actor = STProtocolTransferActorServer;
     req.dappName = @"第三方应用";
     req.dappIcon = nil;
     req.blockchain = @"eosio";
@@ -95,7 +97,7 @@
 - (IBAction)authenticate:(id)sender {
     
     STWalletAuthenticate *  authenticate = [[STWalletAuthenticate alloc]init];
-    authenticate.currentProtocol = STProtocol;
+    authenticate.protocol = STProtocol;
     authenticate.from = @"lazyloadingg";
     authenticate.fromAddress = @"EOS6qsKUyr8Em5QHLUEhkoX1YjbJeWMSDf4fprZJwAgVMaFbkVJeV";
     authenticate.nonce = self.authenticateText.text;

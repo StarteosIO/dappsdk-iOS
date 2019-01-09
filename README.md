@@ -76,7 +76,7 @@
 ```objectivec
 
     STWalletLoginReq *loginReq = [[STWalletLoginReq alloc] init];
-    loginReq.currentProtocol = STProtocol;
+    loginReq.protocol = STProtocol;
     loginReq.dappName = @"DAppName";//第三方登录者
     BOOL result = [STWalletAPI sendReq:loginReq]; 
     
@@ -98,7 +98,7 @@
 
 ```objectivec
     STWalletAuthenticate *  authenticate = [[STWalletAuthenticate alloc]init];
-    authenticate.currentProtocol = STProtocol;
+    authenticate.protocol = STProtocol;
     authenticate.from = @"验证账户名";
     authenticate.fromAddress = @"验证账户公钥";
     authenticate.nonce = self.authenticateText.text;
@@ -118,7 +118,7 @@
 
 ```objectivec
     STWalletLogoutReq * logout = [STWalletLogoutReq new];
-    logout.currentProtocol = STProtocol;
+    logout.protocol = STProtocol;
     BOOL result = [STWalletAPI sendReq:logout];
 
 ```
@@ -130,7 +130,7 @@
 
 ```objectivec
     STWalletTransferReq * req = [[STWalletTransferReq alloc] init];
-    req.currentProtocol = STProtocol;
+    req.protocol = STProtocol;
     
     /**登录状态下可不传*/
     req.fromAddress = @"转出公钥";
@@ -339,7 +339,7 @@
 ```objectivec
 {
     action = login;
-    currentProtocol = SimpleWallet;
+    protocol = SimpleWallet;
     data = "授权成功";
     result = 1;
 }
@@ -374,7 +374,7 @@
 ```objectivec
 {
     action = transfer;
-    currentProtocol = SimpleWallet;
+    protocol = SimpleWallet;
     data =     {
         processed =         {
             "action_traces" =             (

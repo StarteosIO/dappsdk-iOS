@@ -21,14 +21,12 @@ typedef NS_ENUM(NSUInteger, STWalletProtocol) {
  */
 @interface STWalletReq : NSObject
 
-@property (nonatomic, readonly) NSString *protocol;           // 协议名，钱包用来区分不同协议，本协议为 SimpleWallet
 @property (nonatomic, readonly) NSString *version;            // 协议版本信息，如1.0
+@property (nonatomic, assign) STWalletProtocol protocol;           // 协议名，钱包用来区分不同协议，默认为 STProtocolSimpleWallet
 @property (nonatomic, copy) NSString *dappName;               // dapp名字，用于在钱包APP中展示
 @property (nonatomic, copy) NSString *dappIcon;               // dapp图标Url，用于在钱包APP中展示
 @property (nonatomic, copy) NSString *blockchain;             // 公链标识（eosio、ont、ethereum等）
 @property (nonatomic, copy) NSString *action;                 // 登录时，赋值为login。支付时，赋值为transfer 退出登录 logout;
-/** 默认 STProtocolSimpleWallet*/
-@property(nonatomic,assign)STWalletProtocol currentProtocol;
 // Req->NSDictionary
 -(NSDictionary *)toParams;
 @end
@@ -53,7 +51,12 @@ typedef NS_ENUM(NSUInteger, STWalletProtocol) {
 
 @end
 
-
+typedef NS_ENUM(NSUInteger, STProtocolTransferActor) {
+    /**wallet发起转账*/
+    STProtocolTransferActorWallet,
+    /**server发起转账*/
+    STProtocolTransferActorServer
+};
 #pragma mark - 转账
 /*!
  * @class STWalletTransferReq
@@ -69,10 +72,13 @@ typedef NS_ENUM(NSUInteger, STWalletProtocol) {
 @property (nonatomic, copy) NSString *symbol;                   // 转账的token symbol
 @property (nonatomic, copy) NSNumber *precision;                // 转账的token的精度，小数点后面的位数
 @property (nonatomic, copy) NSString *dappData;                 // 由dapp生成的业务参数信息，需要钱包在转账时附加在memo或data中发出去
-
 @property (nonatomic, copy) NSString *desc;                     // 交易的说明信息，钱包在付款UI展示给用户，最长不要超过128个字节
 @property (nonatomic, copy) NSNumber *expired;                  // 交易过期时间，unix时间戳
 
+//STProtocolTransferActorServer 下需传如下参数
+@property(nonatomic,assign)STProtocolTransferActor actor;   //转账发起者 默认STProtocolTransferActorWallet
+@property(nonatomic,copy)NSString * notifyUrl;  // STProtocolTransferActorServer 下回调地址
+@property(nonatomic,copy)NSString * remarks;  // 第三方备注
 @end
 
 #pragma mark - 自定义Trasaction
