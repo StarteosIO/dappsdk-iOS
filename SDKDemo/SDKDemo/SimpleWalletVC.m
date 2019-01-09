@@ -8,7 +8,6 @@
 
 #import "SimpleWalletVC.h"
 #import <STWalletSDK/STWalletAPI.h>
-
 @interface SimpleWalletVC ()
 
 @end

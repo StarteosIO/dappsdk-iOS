@@ -56,9 +56,6 @@
     req.dappData = @"测试转账";
     req.desc = @"转账操作";
     req.expired = [NSNumber numberWithLong:([NSDate date].timeIntervalSince1970 + 60)];
-    req.actor = 1;
-    req.remarks = @"第三方用户的备注信息";
-    req.notifyUrl = @"回调地址 服务器转账成功后通过此地址回调信息";
     BOOL result = [STWalletAPI sendReq:req];
     NSLog(@"转账调用---%d",result);
 }

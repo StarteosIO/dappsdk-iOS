@@ -60,7 +60,7 @@
 -10007 -> 交易失败
 -10008 -> 没有找到转出的钱包
 -10009 -> 没有安装Starteos钱包
--10011 -> 暂不支持
+
 ```
 
 
@@ -125,8 +125,6 @@
 
 
 #### 转账
-
-**钱包直接转账**
 
 > 调用:
 
@@ -311,33 +309,6 @@
 }
 
 ```
-
-**服务器执行转账**
-
-> 调用
-
-```objectivec
-    STWalletTransferReq * req = [[STWalletTransferReq alloc] init];
-    req.currentProtocol = STProtocol;
-    
-    /**登录状态下可不传*/
-    req.fromAddress = @"转出公钥";
-    req.from = @"转出账户"; 
-    req.dappName = @"第三方应用";//转账发起者
-    req.to = @"zijin.x";//转入账户
-    req.contract = @"eosio.token";//合约地址
-    req.amount = @"10.0000";//转账金额
-    req.symbol = @"EOS";
-    req.desc = @"转账描述";
-    req.memo = @"转账备注";
-    req.actor = STProtocolTransferActorServer;
-    req.remarks = @"给服务器的备注信息";
-    req.notifyUrl = @"回调地址 服务器转账成功后通过此地址回调信息";
-    BOOL result = [STWalletAPI sendReq:req];
-
-```
-
-
 
 
 ### SimpleWallet协议用法：
