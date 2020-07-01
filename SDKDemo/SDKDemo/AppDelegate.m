@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <STWalletSDK/STWalletAPI.h>
+#import "STWalletSDK/STWalletAPI.h"
 @interface AppDelegate ()
 
 @end
@@ -31,7 +31,7 @@
             NSLog(@"error--->%@",exception);
         } @finally {}
     }];
-    NSLog(@"解析结果--->%d",result);
+    NSLog(@"解析结果--->%@",result?@"success":@"failed");
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
